@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device,initial-scale=1.0">
-        <title>WDD 131 - Dynamic Web Fundamentals - David Navratil</title>
-        <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, David Navratil, learning websites, website development">
-        <meta name="author" content="David Navratil">
-        <link rel="stylesheet" href="styles/base.css">
-        <script src="scripts/getdates.js" defer></script>
-    </head>
-    <body>
-        <header>
-            <h1>WDD131: Dynamic Web Fundamentals - David Navratil</h1>
-            <nav>
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/david-navratil-31196729b/">LinkedIn</a></li>
-                    <li><a href="https://byui.instructure.com/.">I-Learn</a></li>
-                    <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p4-p5#p4">Scripture</a></li>
-                    <li><a href="#">Final Project</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="card">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device,initial-scale=1.0">
+    <title>WDD 131 - Dynamic Web Fundamentals - David Navratil</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals, David Navratil, learning websites, website development">
+    <meta name="author" content="David Navratil">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>WDD131: Dynamic Web Fundamentals - <span id="name">David Navratil</span></h1>
+        <nav>
+            <ul class="navigation">
+                <li><a href="https://www.linkedin.com/in/david-navratil-31196729b/">LinkedIn</a></li>
+                <li><a href="https://byui.instructure.com/.">I-Learn</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/10?lang=eng&id=p4-p5#p4">Scripture</a>
+                </li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <div id="about">
                 <h2>About Me</h2>
-                <p>My name is David Navratil. I'm from the Czech Republic. Currently I'm a full time student at BYU Idaho online, and I'm planning to serve on a mission really soon. I really love history, it is one of my passions along with computers and data. I want to learn as much as possible about software development so I can work in it when I have my first certificate. </p>
-                <img src="images/profile-pic.jpg" alt="Profile Picture">
+                <p>My name is David Navratil. I'm from the Czech Republic. Currently I'm a full time student at BYU Idaho
+                    online, and I'm planning to serve on a mission really soon. I really love history, it is one of my
+                    passions along with computers and data. I enojoyed the first web development class it was a lot of 
+                    fun even when it was bit hard at times. I want to learn as much as possible about software development
+                    so I can work in it when I have my first certificate. </p>
+                <img id="profile" src="images/profile-pic.jpg"alt="Profile Picture">
+            </div>
+            <div id="czechia">
                 <h2>Czech Republic</h2>
                 <img src="images/czech-flag.png" alt="Flag of Czechia">
-                <p>Czech Republic or Czechia for short, is a beautiful country right in the heart of Europe, with hundreds of castles and chateaus. It used to be one country with Slovakia for a big part of the 20th century, but Slovaks wanted to govern themself alone so they got their own state. It is also the first country which helped to kick off the protestant reform. But usually it is not credited for it too much, probably because it got back by force under the catholic rule. </p>
-            </section>
-            <section class="card">
-                <h2>Web Dev Resources</h2>
-                <nav>
-                    <ul>
-                        <li><a href="https://www.w3schools.com/">W3Schools</a></li>
-                        <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
-                        <li><a href="https://colorhunt.co/">Colorhunt</a></li>
-                        <li><a href="https://devicon.dev/">Devicon</a></li>
-                        <li><a href="https://unsplash.com/">Unsplash</a></li>
-                    </ul>
-                </nav>
-            </section>
-        </main>
-        <footer>
-            <p>
-                <span id="currentyear"></span>
-                ©2024 🛠 David Navratil 🛠 Czech Republic
-            </p>
-            <p id="lastModified"></p>
-        </footer>
-    </body>
+                <p>Czech Republic or Czechia for short is a beautiful country right in the heart of Europe, with hundreds
+                    of castles and chateaus. It used to be one country with Slovakia for a big part of the 20th century, but
+                    Slovaks wanted to govern themself alone so they got their own state. It is also the first country which
+                    helped to kick off the protestant reform. But usually it is not credited for it too much, probably
+                    because it got back by force under the catholic rule. </p>
+            </div>
+        </section>
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <nav>
+                <ul>
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
+                    <li><a href="https://colorhunt.co/">Colorhunt</a></li>
+                    <li><a href="https://devicon.dev/">Devicon</a></li>
+                    <li><a href="https://unsplash.com/">Unsplash</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/">MDN</a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            - David Navratil - Czech Republic
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
 </html>
