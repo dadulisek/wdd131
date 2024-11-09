@@ -61,6 +61,7 @@ main{
 .card{
     border: solid black 1px;
     margin: 1rem;
+    position: relative;
 }
 
 #about{
@@ -126,9 +127,27 @@ main{
 }
 
 .card ul{
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    top: 25%;
+    left: 30%;
+}
+
+#webTools{
+    height: 100%;
+}
+
+#webTools h2{
+    color: white;
+    background-color: var(--primary-color);
+    text-align: center;
+    margin-top: 0;
+}
+
+#webTools a{
+    font-size: 22px;
 }
 
 footer{
