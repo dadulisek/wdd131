@@ -146,9 +146,9 @@ main{
     margin-top: 0;
 }
 
-#webTools a{
+/*#webTools a{
     font-size: 18px;
-}
+}*/
 
 footer{
     background-color: var(--primary-color);
