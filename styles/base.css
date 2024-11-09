@@ -1,7 +1,7 @@
 /* first color maybe
 https://coolors.co/072ac8-1e96fc-a2d6f9-fcf300-ffc600
 */
-:root{
+/*:root{
     --primary-color: #072AC8;
     --secondary-color: #FCF300;
     --accent-color: #FFC600;
@@ -144,13 +144,13 @@ main{
     background-color: var(--primary-color);
     text-align: center;
     margin-top: 0;
-}
+}*/
 
 /*#webTools a{
     font-size: 18px;
 }*/
 
-footer{
+/*footer{
     background-color: var(--primary-color);
 }
 
@@ -161,4 +161,4 @@ footer p{
 
 #lastModified{
     color: var(--accent-color);
-}
+} */
