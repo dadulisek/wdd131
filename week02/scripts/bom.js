@@ -13,6 +13,8 @@ button.addEventListener('click', function(){
         li.append(deleteButton);
         list.append(li);
 
+        input.value = '';
+        
         deleteButton.addEventListener('click', function(){
             list.removeChild(li);
             input.focus();
