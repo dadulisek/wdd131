@@ -1,10 +1,10 @@
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 670px) {
     .gallery{
         grid-template-columns: 1fr 1fr;
     }
 
     header, main, footer{
-        max-width: 1200px;
+        max-width: 1000px;
     }
 
     #menu{
@@ -21,7 +21,7 @@
 	}
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 970px){
     .gallery{
         grid-template-columns: 1fr 1fr 1fr;
     }
