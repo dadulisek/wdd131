@@ -81,7 +81,7 @@ main{
     grid-template-columns: 1fr;
 }
 
-img{
+.gallery img{
     width: 320px;
     height: auto;
 }
