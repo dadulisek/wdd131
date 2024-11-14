@@ -1,0 +1,45 @@
+@media screen and (min-width: 800px) {
+    .gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header, main, footer{
+        max-width: 1200px;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    .navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+}
+
+@media screen and (min-width: 1200px){
+    .gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    header, main, footer{
+        max-width: 1500px;
+    }
+
+    #menu{
+        display: none;
+    }
+
+    .navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+}
