@@ -81,6 +81,11 @@ main{
     grid-template-columns: 1fr;
 }
 
+img{
+    width: 320px;
+    height: auto;
+}
+
 footer{
     text-align: center;
 }
