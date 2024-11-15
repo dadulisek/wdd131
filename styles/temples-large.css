@@ -3,6 +3,10 @@
         grid-template-columns: 1fr 1fr;
     }
 
+    header{
+        padding: 0;
+    }
+
     header, main, footer{
         max-width: 1000px;
     }
@@ -24,6 +28,10 @@
 @media screen and (min-width: 970px){
     .gallery{
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    header{
+        padding: 0;
     }
 
     header, main, footer{
