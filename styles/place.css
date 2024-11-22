@@ -6,7 +6,7 @@
 
 header, main, footer{
     max-width: 640px;
-    margin: 1em auto;
+    margin: 0 auto;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -19,6 +19,7 @@ header{
     background-color: var(--primary-color);
     color: var(--extra-color);
     text-align: center;
+    padding: .5em 0 .5em 0;
 }
 
 body{
@@ -30,6 +31,9 @@ body{
 img{
     max-width: 100%;
     height: auto;
+    margin: 0;
+    padding-top: 1rem;
+    background-color: var(--secondary-color);
 }
 
 .data{
@@ -63,9 +67,9 @@ footer{
 
 @media screen and (min-width: 600px){
 
-    header, main, footer, picture{
+    header, main, footer{
         max-width: 1300px;
-        margin: 1rem auto;
+        margin: 0 auto;
     }
 
     img{
