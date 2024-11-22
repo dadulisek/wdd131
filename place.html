@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <meta name="description" content="Dynamic Web Fundamentals, learning web development.">
+    <meta name="author" content="David Navratil">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Czech Republic</h1>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/hero-image-big.webp" media="(min-width: 600px)">
+            <img src="images/hero-image-small.webp" alt="Czechia Landamarks">
+        </picture>
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li><span class="label">Area: </span> 78 866 km²</li>
+                <li><span class="label">Population: </span> 10 900 555</li>
+                <li><span class="label">Capital: </span> Prague</li>
+                <li><span class="label">Language: </span> Czech</li>
+                <li><span class="label">Currency: </span> Czech Crown</li>
+                <li><span class="label">Time Zone: </span> UTC+1</li>
+                <li><span class="label">Calling Code: </span> +420</li>
+                <li><span class="label">Internet TLD: </span> .cz</li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <ul>
+                <li><span class="label">Temperature: </span></li>
+                <li><span class="label">Conditions: </span></li>
+                <li><span class="label">Wind: </span></li>
+                <li><span class="label">Wind Chill: </span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            - David Navratil - Czech Republic
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
