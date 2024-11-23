@@ -115,20 +115,26 @@ footer{
 
     #hero-image{
         margin: 0;
+        padding-bottom: 0;
+        border: 0;
         padding-top: 1rem;
         background-color: var(--secondary-color);
     }
 
     .here-container{
         position: relative;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
     }
 
     .data{
         position: absolute;
-        top: 17%;
+        top: 23%;
         left: 10%;
         background-color: var(--extra-color);
         opacity: 0.75;
+        padding: 0.1rem 0.5rem 0.75rem 0.5rem;
     }
 
     .weather{
@@ -137,6 +143,7 @@ footer{
         right: 10%;
         background-color: var(--extra-color);
         opacity: 0.75;
+        padding: 0.1rem 0.5rem 0.75rem 0.5rem;
     }
 
     .weather h2::after{
@@ -145,5 +152,10 @@ footer{
 
     #weather-icon{
         display: none;
+    }
+
+    footer{
+        margin-top: 0;
+        border-top: 0;
     }
 }
