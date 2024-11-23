@@ -17,74 +17,59 @@
         <h1>Czech Republic</h1>
     </header>
     <main>
-        <picture>
-            <source srcset="images/hero-image-big.webp" media="(min-width: 600px)">
-            <img src="images/hero-image-small.webp" alt="Czechia Landamarks" id="hero-image">
-        </picture>
-        <section class="data">
-            <h2>Data</h2>
-            <!-- <ul>
-                <li><span class="label">Area: </span> 78 866 km²</li>
-                <li><span class="label">Population: </span> 10 900 555</li>
-                <li><span class="label">Capital: </span> Prague</li>
-                <li><span class="label">Language: </span> Czech</li>
-                <li><span class="label">Currency: </span> Czech Crown</li>
-                <li><span class="label">Time Zone: </span> UTC+1</li>
-                <li><span class="label">Calling Code: </span> +420</li>
-                <li><span class="label">Internet TLD: </span> .cz</li>
-            </ul> -->
-            <div class="data-left">
-                <ul>
-                    <li>Area:</li>
-                    <li>Population:</li>
-                    <li>Capital:</li>
-                    <li>Language:</li>
-                    <li>Currency:</li>
-                    <li>Time Zone:</li>
-                    <li>Calling Code:</li>
-                    <li>Internet TLD:</li>
-                </ul>
-            </div>
-            <div class="data-right">
-                <ul>
-                    <li>78 866 km²</li>
-                    <li>10 900 555</li>
-                    <li>Prague</li>
-                    <li>Czech</li>
-                    <li>Czech Crown</li>
-                    <li>UTC+1</li>
-                    <li>+420</li>
-                    <li>.cz</li>
-                </ul>
-            </div>
-        </section>
-        <section class="weather">
-            <h2>Weather</h2>
-            <img src="images/weather-icon.svg" alt="Weather Icon" id="weather-icon">
-            <!-- <ul>
-                <li><span class="label">Temperature: </span>  4℃</li>
-                <li><span class="label">Conditions: </span>  Partly Cloudy</li>
-                <li><span class="label">Wind: </span> 7km/h</li>
-                <li><span class="label">Wind Chill: </span> <span id="windchill"></span></li>
-            </ul> -->
-
-            <div class="data-left">
-                <ul>
-                    <li>Temperature:</li>
-                    <li>Conditions:</li>
-                    <li>Wind:</li>
-                    <li>Wind Chill:</li>
-                </ul>
-            </div>
-            <div class="data-right">
-                <ul>
-                    <li> 4℃</li>
-                    <li>Partly Cloudy</li>
-                    <li>7km/h</li>
-                    <li><span id="windchill"></span></li>
-                </ul>
-            </div>
-        </section>
+        <div class="hero-container">
+            <picture>
+                <source srcset="images/hero-image-big.webp" media="(min-width: 600px)">
+                <img src="images/hero-image-small.webp" alt="Czechia Landamarks" id="hero-image">
+            </picture>
+            <section class="data">
+                <h2>Data</h2>
+                <div class="data-left">
+                    <ul>
+                        <li>Area:</li>
+                        <li>Population:</li>
+                        <li>Capital:</li>
+                        <li>Language:</li>
+                        <li>Currency:</li>
+                        <li>Time Zone:</li>
+                        <li>Calling Code:</li>
+                        <li>Internet TLD:</li>
+                    </ul>
+                </div>
+                <div class="data-right">
+                    <ul>
+                        <li>78 866 km²</li>
+                        <li>10 900 555</li>
+                        <li>Prague</li>
+                        <li>Czech</li>
+                        <li>Czech Crown</li>
+                        <li>UTC+1</li>
+                        <li>+420</li>
+                        <li>.cz</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="weather">
+                <h2>Weather</h2>
+                <img src="images/weather-icon.svg" alt="Weather Icon" id="weather-icon">
+                <div class="data-left">
+                    <ul>
+                        <li>Temperature:</li>
+                        <li>Conditions:</li>
+                        <li>Wind:</li>
+                        <li>Wind Chill:</li>
+                    </ul>
+                </div>
+                <div class="data-right">
+                    <ul>
+                        <li> 4℃</li>
+                        <li>Partly Cloudy</li>
+                        <li>7km/h</li>
+                        <li><span id="windchill"></span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <p>

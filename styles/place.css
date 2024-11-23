@@ -64,7 +64,7 @@ body{
 
 .weather{
     display: grid;
-    grid-column: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
 }
 
@@ -109,13 +109,41 @@ footer{
 @media screen and (min-width: 600px){
 
     header, main, footer{
-        max-width: 1300px;
+        max-width: 1350px;
         margin: 0 auto;
     }
 
-    img{
+    #hero-image{
         margin: 0;
         padding-top: 1rem;
         background-color: var(--secondary-color);
+    }
+
+    .here-container{
+        position: relative;
+    }
+
+    .data{
+        position: absolute;
+        top: 17%;
+        left: 10%;
+        background-color: var(--extra-color);
+        opacity: 0.75;
+    }
+
+    .weather{
+        position: absolute;
+        top: 75%;
+        right: 10%;
+        background-color: var(--extra-color);
+        opacity: 0.75;
+    }
+
+    .weather h2::after{
+        content: ' ⛅';
+    }
+
+    #weather-icon{
+        display: none;
     }
 }

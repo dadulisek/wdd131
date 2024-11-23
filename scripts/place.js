@@ -32,5 +32,8 @@ function calculateWindChill(temperature, windSpeed) {
 
 const windChillCelsiues = calculateWindChill(temp, windSpeed);
 const windChillLabel = document.querySelector('#windchill');
-
-windChillLabel.textContent = `${windChillCelsiues}℃`;
+if (temp <= 10 && windSpeed > 5){
+    windChillLabel.textContent = `${windChillCelsiues}℃`;
+} else{
+    windChillLabel.textContent = 'N/A';
+}
