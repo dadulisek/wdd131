@@ -86,8 +86,13 @@ main{
 }
 
 .gallery img{
-    width: 320px;
+    max-width: 100%;
     height: auto;
+}
+
+figure{
+	max-width: 100%;
+	height: auto;
 }
 
 footer{
