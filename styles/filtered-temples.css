@@ -1,0 +1,95 @@
+:root{
+    --primary-color: #5321b8;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header{
+	padding: .75rem;
+}
+
+header, main, footer{
+    max-width: 640px;
+    margin: 1rem auto;
+}
+
+header, footer{
+    background-color: var(--primary-color);
+    color: #fff
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: #000;
+ 	position: absolute;
+	right: 1rem;
+	top: 3.15rem;
+    color: #fff;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "X";
+}
+
+.navigation {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.navigation a {
+	display: none;
+	padding: 1rem;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+.navigation a:hover {
+	background-color: #adadad;
+	color: #333;
+	font-weight: 700;
+}
+
+figcaption{
+    color: var(--primary-color);
+}
+
+.open a {
+	display: block;
+}
+
+main{
+    text-align: center;
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.gallery img{
+    width: 320px;
+    height: auto;
+}
+
+footer{
+    text-align: center;
+}
