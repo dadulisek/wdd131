@@ -6,6 +6,16 @@ hamButton.addEventListener('click', () => {
     hamButton.classList.toggle('open');
 });
 
+const container = document.querySelector('.gallery');
+const infoHeader = document.querySelector('#info-header');
+
+const homeButton = document.getElementById('home');
+const oldButton = document.querySelector('#old');
+const newButton = document.getElementById('new');
+const largeButton = document.getElementById('large');
+const smallButton = document.getElementById('small');
+
+
 function templesToHTML(temples) {
     const container = document.querySelector('.gallery');
 
@@ -125,4 +135,45 @@ const temples = [
     // Add more temple objects here...
 ];
 
+const oldTemples = temples.filter(temple =>{ 
+    const [templeYear] = temple.dedicated.split(', ');
+    return parseInt(templeYear) < 1900;
+})
+const newTemples = temples.filter(temple =>{ 
+    const [templeYear] = temple.dedicated.split(', ');
+    return parseInt(templeYear) > 2000;
+})
+const smallTemples = temples.filter(temple => temple.area < 10000);
+const largeTemples = temples.filter(temple => temple.area > 100000);
+
 templesToHTML(temples);
+
+homeButton.addEventListener('click', function(){
+    infoHeader.textContent = 'Home';
+    container.innerHTML = '';
+    templesToHTML(temples);
+});
+
+oldButton.addEventListener('click', function(){
+    infoHeader.textContent = 'Old';
+    container.innerHTML = '';
+    templesToHTML(oldTemples);
+});
+
+newButton.addEventListener('click', function(){
+    infoHeader.textContent = 'New';
+    container.innerHTML = '';
+    templesToHTML(newTemples);
+});
+
+largeButton.addEventListener('click', function(){
+    infoHeader.textContent = 'Large';
+    container.innerHTML = '';
+    templesToHTML(largeTemples);
+});
+
+smallButton.addEventListener('click', function(){
+    infoHeader.textContent = 'Small';
+    container.innerHTML = '';
+    templesToHTML(smallTemples);
+});
