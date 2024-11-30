@@ -27,7 +27,7 @@ function templesToHTML(temples) {
         image.src = temple.imageUrl;
         image.alt = temple.templeName + ' temple';
         image.width = '400';
-        image.height = 'auto';
+        image.height = '250';
         image.loading = 'lazy';
         figure.appendChild(image);
 
