@@ -9,3 +9,21 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+
+header{
+    background-color: #8B4513;
+    color: #fff;
+}
+
+h2{
+    background-color: #DAA520;
+}
+
+#brown{
+    background-color: #8B4513;
+    color: #fff;
+}
+
+#gold{
+    background-color: #DAA520;
+}
