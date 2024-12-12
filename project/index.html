@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil War Reenactment Hub</title>
+    <meta name="author" content="David Navratil">
+    <meta name="description" content="Civil War Reenacment, WDD131 project, learning html css and js.">
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Civil War Reenactment Hub</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#">Get Started</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/hero-image-large.webp" media="(min-width: 600px)">
+            <img src="images/hero-image-small.webp" alt="Civil War Cannon" id="hero-image" loading="lazy">
+        </picture>
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            - David Navratil - Civil War Reenactment Hub
+        </p>
+    </footer>
+</body>
+</html>

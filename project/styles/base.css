@@ -1,0 +1,26 @@
+:root{
+    --base-color: #8B4513;
+    --secondary-color : #DAA520;
+}
+
+h1, h2, h3, h4, h5 h6{
+    font-family: "Charm", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header, main, footer{
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#hero-image{
+    max-width: 100%;
+    height: auto;
+}
