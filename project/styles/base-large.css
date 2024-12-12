@@ -1,0 +1,22 @@
+@media screen and (min-width: 600px){
+    #menu{
+        display: none;
+    }
+
+    .navigation {
+		flex-direction: row;
+	}
+
+	.navigation a {
+		display: block;
+		flex: 1 1 100%;
+	}
+
+    header, main, footer{
+        max-width: 1400px;
+    }
+
+    #hero-image{
+        margin-top: .2em;
+    }
+}
