@@ -88,3 +88,7 @@ footer{
 .open a {
 	display: block;
 }
+
+section h2{
+    text-align: center;
+}

@@ -1,10 +1,22 @@
-const year = document.querySelector("#currentyear");
+// const year = document.querySelector("#currentyear");
 
-const currentYear = new Date().getFullYear();
+// const currentYear = new Date().getFullYear();
 
-year.textContent = currentYear;
+// year.textContent = currentYear;
 
-const lastModifiedDate = new Date(document.lastModified);
+// const lastModifiedDate = new Date(document.lastModified);
+
+function getYear (){
+    const year = document.querySelector("#currentyear");
+
+    const currentYear = new Date().getFullYear();
+    
+    year.textContent = currentYear;
+    
+    const lastModifiedDate = new Date(document.lastModified);
+}
+
+getYear();
 
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
