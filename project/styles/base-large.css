@@ -19,4 +19,19 @@
     #hero-image{
         margin-top: .2em;
     }
+
+    #about{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #about p{
+        grid-column: 2/3;
+        margin: 0.7rem;
+    }
+
+    #union-cav{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
 }
