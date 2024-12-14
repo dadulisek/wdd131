@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Civil War Reenactment Hub | Unit Registry</title>
+    <meta name="author" content="David Navratil">
+    <meta name="description" content="Civil War Reenacment, WDD131 project, learning html css and js.">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/base-large.css">
+    <script src="scripts/gadgets.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Civil War Reenactment Hub</h1>
+        <button id="menu" aria-label="Menu"></button>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="registry.html">Unit Registry</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Registered Units</h2>
+        <div id="buttons">
+            <button id="display-all">Show All</button>
+            <button id="display-south">Show Confederate Units</button>
+            <button id="display-north">Show Union Units</button>
+        </div>
+        <div id="regiment-list"></div>
+        <form id="unitForm">
+            <h2>Add Your Unit</h2>
+            <label for="unitName">Unit Name:</label>
+            <input type="text" id="unitName" required>
+            <span id="unitNameError" class="error"></span><br><br>
+    
+            <label for="unitSide">Side:</label>
+            <select id="unitSide" required>
+                <option value="">Select Side</option>
+                <option value="Union">Union</option>
+                <option value="Confederate">Confederate</option>
+            </select>
+            <span id="unitSideError" class="error"></span><br><br>
+    
+            <label>Unit Type(s):</label><br>
+            <input type="checkbox" id="unitTypeInfantry" value="Infantry"> Infantry<br>
+            <input type="checkbox" id="unitTypeCavalry" value="Cavalry"> Cavalry<br>
+            <input type="checkbox" id="unitTypeArtillery" value="Artillery"> Artillery<br><br>
+    
+            <label for="numMembers">Approximate Members:</label>
+            <input type="number" id="numMembers" min="1"><br><br>
+    
+            <label for="unitLocation">Location:</label>
+            <input type="text" id="unitLocation"><br><br>
+    
+            <label for="unitPhone">Phone:</label>
+            <input type="tel" id="unitPhone"><br><br>
+    
+            <label for="unitEmail">Email:</label>
+            <input type="email" id="unitEmail"><br><br>
+    
+            <button type="submit">Submit</button>
+        </form>
+        <div id="holdContainer">
+            <h2>Hold List of Soon to be Registred Units</h2>
+            <div id="outputContainer">
+
+            </div>
+        
+            <div id="mockContainer">
+                <div class="union">
+                    <h3>69th New York</h3>
+                    <p>Side: Union</p>
+                    <p>Type(s): Infantry</p>
+                    <p>Approximate Members: 80</p>
+                    <p>Location: Albany, NY</p>
+                    <p>Phone: (212) 391-1574</p>
+                    <p>Email: ny69th@nyhistory.org</p>
+                </div>
+                <div class="confederacy">
+                    <h3>1st Virginia Cavalry</h3>
+                    <p>Side: Confederacy</p>
+                    <p>Type(s): Cavalry</p>
+                    <p>Approximate Members: 35</p>
+                    <p>Location: Arlington, VA</p>
+                    <p>Phone: (315) 690-5341</p>
+                    <p>Email: 1stvacavh@vahistory.org</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            - David Navratil - Civil War Reenactment Hub
+        </p>
+    </footer>
+</body>
+</html>

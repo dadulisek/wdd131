@@ -92,3 +92,18 @@ footer{
 section h2{
     text-align: center;
 }
+
+#buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    background-color: var(--secondary-color);
+}
+
+#regiment-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}

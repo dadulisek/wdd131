@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Unit Form</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        fieldset {
+          margin-bottom: 10px;
+          border: 1px solid gray;
+        }
+        legend{
+          padding: 0 5px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Add Your Unit</h1>
+
+    <form id="add-unit-form">
+        <label for="unit-name">Unit Name:</label>
+        <input type="text" id="unit-name" name="unit-name" required>
+        <div id="unit-name-error" class="error"></div>
+
+        <fieldset>
+          <legend>Side</legend>
+        <label><input type="radio" name="side" value="north" required> North</label>
+        <label><input type="radio" name="side" value="south"> South</label>
+        <div id="side-error" class="error"></div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Unit Type(s)</legend>
+        <label><input type="checkbox" name="unit-type" value="infantry"> Infantry</label>
+        <label><input type="checkbox" name="unit-type" value="cavalry"> Cavalry</label>
+        <label><input type="checkbox" name="unit-type" value="artillery"> Artillery</label>
+        <label><input type="checkbox" name="unit-type" value="naval"> Naval</label>
+        <div id="unit-type-error" class="error"></div>
+        </fieldset>
+
+        <label for="num-members">Number of Members:</label>
+        <input type="number" id="num-members" name="num-members" min="1" required>
+        <div id="num-members-error" class="error"></div>
+
+        <label for="home-location">Home Location:</label>
+        <input type="text" id="home-location" name="home-location" required>
+        <div id="home-location-error" class="error"></div>
+
+        <label for="contact-info">Contact Info:</label>
+        <textarea id="contact-info" name="contact-info"></textarea>
+
+        <button type="submit">Add Unit</button>
+    </form>
+
+    <div id="units-container">
+        <h2>Participating Units</h2>
+        <p id="no-units-message" style="display: none;">No units currently listed.</p>
+    </div>
+
+    <script>
+        let units = JSON.parse(localStorage.getItem('units')) || [];
+        const form = document.getElementById('add-unit-form');
+
+        function displayUnits() {
+            const unitsContainer = document.getElementById('units-container');
+            const noUnitsMessage = document.getElementById('no-units-message');
+            unitsContainer.innerHTML = '<h2>Participating Units</h2>';
+
+            if (units.length === 0) {
+                noUnitsMessage.style.display = 'block';
+                return;
+            } else {
+              noUnitsMessage.style.display = 'none';
+            }
+
+            units.forEach((unit, index) => {
+                const unitDiv = document.createElement('div');
+                unitDiv.innerHTML = `
+                    <h3>${unit.name}</h3>
+                    <p>Side: ${unit.side}</p>
+                    <p>Type(s): ${unit.types.join(', ')}</p>
+                    <p>Members: ${unit.members}</p>
+                    <p>Location: ${unit.location}</p>
+                    <p>Contact: ${unit.contact || 'N/A'}</p>
+                    <button class="delete-unit-button" data-index="${index}">Delete</button>
+                `;
+                unitsContainer.appendChild(unitDiv);
+            });
+            const deleteUnitButtons = document.querySelectorAll('.delete-unit-button');
+                deleteUnitButtons.forEach(button => {
+                  button.addEventListener('click', deleteUnit);
+                });
+        }
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            clearErrors();
+            let isValid = validateForm();
+
+            if(isValid){
+            const name = document.getElementById('unit-name').value;
+            const side = document.querySelector('input[name="side"]:checked').value;
+            const types = Array.from(document.querySelectorAll('input[name="unit-type"]:checked')).map(cb => cb.value);
+            const members = parseInt(document.getElementById('num-members').value);
+            const location = document.getElementById('home-location').value;
+            const contact = document.getElementById('contact-info').value;
+
+            const newUnit = { name, side, types, members, location, contact };
+            units.push(newUnit);
+            localStorage.setItem('units', JSON.stringify(units));
+            displayUnits();
+            form.reset();
+            }
+        });
+        function validateForm(){
+          let isValid = true;
+          if(document.getElementById('unit-name').value === ""){
+            displayError("unit-name", "Unit name is required");
+            isValid = false;
+          }
+          if(!document.querySelector('input[name="side"]:checked')){
+            displayError("side", "Side is required");
+            isValid = false;
+          }
+          if(document.querySelectorAll('input[name="unit-type"]:checked').length === 0){
+            displayError("unit-type", "Select at least one unit type");
+            isValid = false;
+          }
+          if(document.getElementById('num-members').value === "" || parseInt(document.getElementById('num-members').value) < 1){
+            displayError("num-members", "Number of members must be at least 1");
+            isValid = false;
+          }
+          if(document.getElementById('home-location').value === ""){
+            displayError("home-location", "Home location is required");
+            isValid = false;
+          }
+          return isValid;
+        }
+        function displayError(fieldId, message){
+          const errorDiv = document.getElementById(fieldId + "-error");
+          errorDiv.textContent = message;
+        }
+        function clearErrors(){
+          const errorDivs = document.querySelectorAll(".error");
+          errorDivs.forEach(div => div.textContent = "");
+        }
+        function deleteUnit(event){
+          const indexToDelete = event.target.dataset.index;
+          units.splice(indexToDelete, 1);
+          localStorage.setItem('units', JSON.stringify(units));
+          displayUnits();
+        }
+
+        displayUnits();
+    </script>
+
+</body>
+</html>
