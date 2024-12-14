@@ -16,8 +16,9 @@
         max-width: 1400px;
     }
 
-    #hero-image{
-        margin-top: .2em;
+    .hero-image{
+        margin: 0.2em auto;
+        display: block;
     }
 
     #about{
@@ -55,5 +56,13 @@
 
     #regiment-list{
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    #holdContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #contact{
+        font-size: 1.2rem;
     }
 }

@@ -100,9 +100,20 @@ section h2{
 
 button{
     background-color: var(--secondary-color);
+    margin: 0.1rem 0 0.1rem 0;
 }
 
 #regiment-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+}
+
+#holdContainer{
     display: grid;
     grid-template-columns: 1fr;
     text-align: center;
