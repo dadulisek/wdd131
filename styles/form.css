@@ -1,7 +1,13 @@
-/* .thanks {
+.thanks {
   text-align: center;
   padding: 1rem;
-} */
+}
+
+body{
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 header, main, footer{
     margin: 0 auto;
