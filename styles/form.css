@@ -72,7 +72,7 @@ input[type="radio"] {
   margin-left: 5px;
   display: flex;
   align-items: center;
-  caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+  caret-color: #000; /* remove blinking cursor*/
 }
 
 .stars > label:hover {
