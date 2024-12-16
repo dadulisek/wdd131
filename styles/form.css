@@ -1,0 +1,105 @@
+/* .thanks {
+  text-align: center;
+  padding: 1rem;
+} */
+
+header, main, footer{
+    margin: 0 auto;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 500px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  background-color: #0c1177;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+form {
+  width: 100%;
+  /* padding: 0.5rem; */
+  padding-bottom: 0.5rem;
+  background-color: #dedede;
+}
+
+.formField {
+  margin-bottom: 1rem;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: .5rem;
+}
+
+textarea {
+  max-width: 400px;
+
+}
+
+
+
+input[type="radio"] {
+  display: none;
+  position: relative;
+  caret-color: #000; 
+}
+
+.stars {
+  justify-content: left;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.stars > label {
+  color: gold;
+  width: 30px;
+  height: 30px;
+  font-size: 2rem;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  caret-color: rgba(0, 0, 0, 0); /* remove blinking cursor*/
+}
+
+.stars > label:hover {
+  color: #000;
+}
+
+.stars > label::before {
+  content: "\2606";
+}
+
+.stars input:checked ~ label::before {
+  content: "\2605";
+}
+
+.checkbox {
+  padding-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+input[type="submit"] {
+  display: block;
+  margin: auto;
+  background-color: #0c1177;
+  color: white;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #0c1177;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
