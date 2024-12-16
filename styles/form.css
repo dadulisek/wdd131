@@ -3,11 +3,11 @@
   padding: 1rem;
 }
 
-body{
+/* body{
     font-family: "Roboto", serif;
     font-weight: 400;
     font-style: normal;
-}
+} */
 
 header, main, footer{
     margin: 0 auto;
